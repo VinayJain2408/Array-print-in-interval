@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <input type="text" placeholder="enter your friend name">
+        <button>Array</button>
+        <button>Prints</button>
+    </div>
+    <script>
+        let friend = [];
+        let inp = document.querySelector("input")
+        let button1 = document.querySelector("button:first-of-type")
+        let button2 = document.querySelector("button:last-of-type")
+        let para = document.createElement("p")
+        document.querySelector("#wrapper").appendChild(para)
+        let clear;
+        let counter= 0;
+        button1.onclick = () => {
+            friend.push(inp.value)
+            console.log(friend)
+        }
+        button2.onclick = () => {
+           
+          clear = setInterval(() => {
+            if(counter === friend.length -1){
+                
+                para.innerHTML  += friend[counter++];
+                clearInterval(clear);
+          }
+          else{
+            para.innerHTML += friend[counter++];
+          }
+               
+    }, 1000)
+       
+        }
+8
+        
+    </script>
+</body>
+
+</html>
