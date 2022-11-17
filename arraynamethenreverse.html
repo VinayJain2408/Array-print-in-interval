@@ -32,11 +32,11 @@
           clear = setInterval(() => {
             if(counter === friend.length -1){
                 
-                para.innerHTML  += friend[counter++];
+                para.innerHTML  += friend[counter++] ;
                 clearInterval(clear);
           }
           else{
-            para.innerHTML += friend[counter++];
+            para.innerHTML += friend[counter++] + " , ";
           }
                
     }, 1000)
